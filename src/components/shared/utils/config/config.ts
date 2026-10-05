@@ -39,13 +39,13 @@ const getDefaultServerURL = () => {
     const isProductionEnv = isProduction();
 
     try {
-        return isProductionEnv ? WS_SERVERS.PRODUCTION : WS_SERVERS.STAGING;
+        return WS_SERVERS.PRODUCTION;
     } catch (error) {
         console.error('Error in getDefaultServerURL:', error);
     }
 
     // Production defaults to demov2, staging/preview defaults to qa194 (demo)
-    return isProductionEnv ? WS_SERVERS.PRODUCTION : WS_SERVERS.STAGING;
+    return WS_SERVERS.PRODUCTION;
 };
 
 /**
@@ -273,3 +273,4 @@ export const generateOAuthURL = async (prompt?: string) => {
     // Fallback to hardcoded URLs if brand config fails
     return ``;
 };
+
