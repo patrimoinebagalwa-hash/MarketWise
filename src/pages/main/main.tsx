@@ -40,6 +40,7 @@ import { useDevice } from '@deriv-com/ui';
 import RunPanel from '../../components/run-panel';
 import ChartModal from '../chart/chart-modal';
 import Dashboard from '../dashboard';
+import MarketWise from '../marketwise';
 import RunStrategy from '../dashboard/run-strategy';
 import './main.scss';
 
@@ -386,7 +387,7 @@ const AppWrapper = observer(() => {
                                 }
                                 id='id-dbot-dashboard'
                             >
-                                <Dashboard handleTabChange={handleTabChange} />
+                                <MarketWise />
                             </div>
                             <div
                                 label={
@@ -500,3 +501,5 @@ const AppWrapper = observer(() => {
 });
 
 export default AppWrapper;
+
+

@@ -1,0 +1,194 @@
+.marketwise {
+    min-height: 100vh;
+    padding: 32px;
+    background: #f5f7fa;
+    font-family: Arial, sans-serif;
+}
+
+.marketwise__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.marketwise__header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.marketwise__header p {
+    margin: 6px 0 0;
+}
+
+.marketwise__status {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #eeeeee;
+}
+
+.marketwise section {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.marketwise button {
+    padding: 12px 20px;
+    margin-right: 12px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.marketwise button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.marketwise__risk p,
+.marketwise__engine p {
+    margin: 10px 0;
+}
+
+.marketwise__risk label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.marketwise__risk input {
+    display: block;
+    width: 100%;
+    min-width: 120px;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    margin-top: 4px;
+    border: 1px solid #d6d9de;
+    border-radius: 8px;
+    background: #fff;
+    font: inherit;
+}
+
+.marketwise__risk input:disabled {
+    background: #f2f3f5;
+    cursor: not-allowed;
+}
+
+.marketwise__autorun {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.marketwise__autorun label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.marketwise__autorun input,
+.marketwise__autorun select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #d6d9de;
+    border-radius: 8px;
+    background: #fff;
+    font: inherit;
+}
+
+.marketwise__autorun input:disabled,
+.marketwise__autorun select:disabled {
+    background: #f2f3f5;
+    cursor: not-allowed;
+}
+
+.marketwise__autorun p {
+    margin: 0;
+}
+
+/* MarketWise wide dashboard layout */
+.marketwise {
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+}
+
+.marketwise__content {
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    .marketwise__content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
+    }
+}
+
+@media (max-width: 999px) {
+    .marketwise__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Compact MarketWise dashboard */
+.marketwise__dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.marketwise__dashboard-grid > section {
+    width: auto;
+    margin: 0;
+    min-width: 0;
+}
+
+.marketwise__risk {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 12px;
+}
+
+.marketwise__risk h2,
+.marketwise__risk > p {
+    grid-column: 1 / -1;
+}
+
+.marketwise__risk label {
+    min-width: 0;
+}
+
+.marketwise__risk input {
+    min-width: 0;
+}
+
+.marketwise__autorun input,
+.marketwise__autorun select {
+    max-width: 320px;
+}
+
+@media (max-width: 900px) {
+    .marketwise__dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marketwise__risk {
+        grid-template-columns: 1fr;
+    }
+}
